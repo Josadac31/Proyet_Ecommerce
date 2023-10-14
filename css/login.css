@@ -1,0 +1,247 @@
+:root {
+  --theme-color: rgb(255, 255, 255);
+  --primary-color: #124f88;
+  --secundary-color: #ff0037;
+  --text-color-inverse: rgb(255, 255, 255);
+  --text-color: black;
+  --navbar-shallow-color: #e5e5e5;
+  --menu-mobile-background-color: #3a4460;
+}
+
+body {
+  background: linear-gradient(
+    36deg,
+    rgba(102, 7, 8, 1) 9%,
+    rgba(164, 22, 26, 1) 34%,
+    rgba(186, 24, 27, 1) 71%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Error {
+  background-color: #ff3b30;/* Color de fondo rojo */
+  color: white;/* Color del texto en blanco */
+  padding: 10px 20px;/* Espaciado interno para el texto */
+  border-radius: 5px;/* Borde redondeado */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);/* Sombra */
+  position: fixed;/* Posición fija para que esté siempre en la parte superior */
+  top: 20px;/* Distancia desde la parte superior de la ventana */
+  left: 50%;/* Centra horizontalmente */
+  transform: translateX(-50%);/* Centra horizontalmente */
+  z-index: 9999;/* Z-index alto para que esté por encima de otros elementos */
+  text-align: center;/* Alinea el texto al centro */
+  font-size: 16px;/* Tamaño de fuente */
+  font-weight: bold;/* Texto en negrita */
+}
+
+.img-login {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 80px;
+}
+
+.img-login img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-login h2 {
+  position: absolute;
+  top: 50%;/* Alinea el texto verticalmente al centro */
+  left: 50%;/* Alinea el texto horizontalmente al centro */
+  transform: translate(-50%, -50%);/* Centra el texto en el div */
+  font-size: 13vh;/* Tamaño de fuente grande */
+  color: white;/* Color del texto */
+  opacity: 0.8;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.card {
+  width: 95%;/* Ancho del formulario */
+  background: rgba(255, 255, 255, 0.048);
+}
+
+.bodyForm {
+  width: 50vw !important ;
+  background: rgba(255, 255, 255, 0.137) !important;
+}
+.card-body {
+  background: transparent;
+  height: 60% !important;
+}
+
+.card-header {
+  background: rgba(255, 255, 255, 0.993);
+}
+
+h2 {
+  color: var(--navbar-shallow-color);
+}
+
+form .input-group-text {
+  background: var(--secundary-color);
+}
+
+.mt-1 .pt-1 {
+  color: #ffffff;
+}
+
+p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.btnGoogle {
+  cursor: pointer;
+  position: relative;
+  max-width: 100%;
+  padding: 10px 10px;
+  margin: 0 auto;/* Ajusta el margen vertical */
+  font-size: 13px;
+  color: rgb(21, 0, 80);
+  border-radius: 34px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+  z-index: 99;
+}
+
+.btnGoogle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  border: none;
+  scale: 0;
+  z-index: -1;
+  color: black;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.82, 1);
+}
+
+.btnGoogle:hover::before {
+  border: none;
+  scale: 3;
+}
+
+.btnGoogle:hover {
+  border: none;
+  color: #0c0c0c;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(255, 0, 0, 0.4);
+}
+
+.btnGoogle:active {
+  scale: 1;
+}
+
+.btnLogin {
+  cursor: pointer;
+  position: relative;
+  max-width: 100%;
+  padding: 10px 10px;
+  margin: 0 auto;/* Ajusta el margen vertical */
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  border-radius: 34px;
+  border: none;
+  background-color: rgb(255, 43, 43);
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+  z-index: 99;
+}
+
+.btnLogin::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  border: none;
+  scale: 0;
+  z-index: -1;
+  color: black;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.82, 1);
+}
+
+.btnLogin:hover::before {
+  border: none;
+  scale: 3;
+}
+
+.btnLogin:hover {
+  border: none;
+  color: #0c0c0c;
+  scale: 1.1;
+  box-shadow: 0 0px 20px rgba(255, 0, 0, 0.4);
+}
+
+.btnLogin:active {
+  scale: 1;
+}
+
+/* Estilos para la ventana modal */
+.modal {
+  display: none; /* Ocultar la ventana modal de forma predeterminada */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none; 
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #ececec;
+  margin: 15% auto;
+  padding: 20px;
+  color: #881212;
+border-radius: 20px;  width: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  color: #ff0037;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.bienvenida {
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background-color: #ececec;
+  color: green;
+}

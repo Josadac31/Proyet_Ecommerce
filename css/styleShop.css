@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+#inicio {
+  text-align: center;
+  font-size: 40px;
+  color: #1d1d1d;
+  margin-top: 80px;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+}
+
+.hero-section {
+  align-items: center;
+  display: flex;
+  min-height: 90vh;
+  justify-content: center;
+}
+.card-grid {
+  display: inline-flex;
+  grid-column-gap: 40px;
+}
+.cardBlue {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  transition: 0.8s ease-out;
+  border-radius: 20px;
+  background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+}
+.cardBlue:hover {
+  box-shadow: 2px 30px 30px rgba(0, 0, 0, 0.5);
+}
+.card__background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: filter 200ms linear, transform 200ms linear;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+}
+
+.card__content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 24px;
+}
+
+.card__heading {
+  color: #fff;
+  font-size: 1.9rem;
+  line-height: 1.4;
+  width: 80%;
+  font-weight: normal;
+}
+
+.card__category {
+  position: absolute;
+  left: 35%;
+  top: 14em;
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cardBlue:hover .card__background {
+  transform: scale(1.05) translateZ(0);
+}
+.card-grid:hover > .cardBlue:not(:hover),
+.card__content:not(:hover) .card__background {
+  filter: brightness(0.8) saturate(1) contrast(1.2) blur(10px);
+}
+
+.productsCarrusel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Utiliza overflow-x para controlar el desplazamiento horizontal */
+  scrollbar-width: none; /* Oculta la barra de desplazamiento en navegadores compatibles */
+  height: 420px;
+  width: 95%;
+  margin: 90px auto;
+}
+
+.productsCarrusel::-webkit-scrollbar {
+  width: 0; /* Oculta la barra de desplazamiento en navegadores webkit */
+}
+
+.elemntsCarrusel {
+  flex: 1 0 auto;
+  margin: 10px 20px; /* Puedes ajustar el margen según tus preferencias */
+  width: 250px;
+  height: 90%;
+  animation: scroll 20s linear infinite; /* Ajusta la velocidad aquí */
+}
+.elemntsCarrusel .product {
+  height: 100%;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(calc(-200px * 1));
+  }
+  40% {
+    transform: translateX(calc(-200px * 2));
+  }
+  60% {
+    transform: translateX(calc(-200px * 3));
+  }
+  80% {
+    transform: translateX(calc(-200px * 4));
+  }
+  100% {
+    transform: translateX(0); /* Vuelve a la primera imagen */
+  }
+}

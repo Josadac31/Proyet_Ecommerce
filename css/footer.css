@@ -1,0 +1,119 @@
+a{
+    text-decoration: none;
+}
+
+
+.slider-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente en la pantalla */
+    align-items: center;
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    overflow: hidden;
+}
+.slider-container h1, h2, h3{
+    margin: 10px auto;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 13rem;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 60s linear infinite; /* Ajusta la velocidad aquí */
+    width: calc(200px * 10); /* Duplica el número de diapositivas para hacerlo infinito */
+}
+
+.slider .slide {
+    width: 150px;
+    margin: auto 30px;
+}
+
+.slider .slide img {
+    width: 100%;
+    height: auto; 
+    opacity: 0.5;
+}
+.slider .slide img:hover{
+    opacity: 1 ;
+    cursor: pointer;
+}
+
+/* Agrega animación de aceleración al principio y al final */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(calc(-200px * 1));
+    }
+    40% {
+        transform: translateX(calc(-200px * 2));
+    }
+    60% {
+        transform: translateX(calc(-200px * 3));
+    }
+    80% {
+        transform: translateX(calc(-200px * 4));
+    }
+    100% {
+        transform: translateX(0); /* Vuelve a la primera imagen */
+    }
+}
+.searchBox {
+    display: flex;
+    max-width: 630px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #EF3B36;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #c9c6c6, #EF3B36);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #c9c6c6, #EF3B36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 50px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.searchButton {
+    color: red;
+    position: absolute;
+    text-decoration: none;
+    right: 8px;
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    background: #ED213A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+/*hover effect*/
+button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+}
+
+/*button pressing effect*/
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: rgb(2, 7, 56);
+    font-size: 15px;
+    padding: 24px 86px 24px 26px;
+    width: 800px;
+}

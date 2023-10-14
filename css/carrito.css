@@ -1,0 +1,320 @@
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+/* Estilos para la sección de la tienda */
+.store {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 85%;
+  margin: 0 auto;
+  justify-content: space-between; /* Ajusta el espacio entre las tarjetas */
+  padding: 20px;
+  gap: 20px; /* Añade espacio entre los productos */
+}
+
+.product {
+  position: relative; /* Establece una posición relativa */
+  background-color: #ffffff;
+  width: 250px;
+  height: 55vh;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.product h3 {
+  font-size: 20px;
+}
+.product img {
+  top: 5px;
+  max-width: 95%;
+  height: auto;
+}
+
+.product button {
+  position: absolute; /* Establece una posición absoluta */
+  bottom: 5%; /* Distancia de 5px desde la parte inferior */
+  transform: translateX(-50%);
+  width: 80% !important; /* Ocupa todo el ancho del contenedor */
+}
+
+/* Estilos para el carrito de compras */
+.cart {
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 100%; /* Cambia el ancho para que ocupe todo el espacio disponible */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 20px auto; /* Añade margen arriba y abajo */
+}
+
+.cart h2 {
+  text-align: center;
+}
+
+#cart-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart-items li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Estilos para el botón Eliminar */
+.delete-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.delete-svgIcon {
+  width: 15px;
+  transition-duration: 0.3s;
+}
+
+.delete-svgIcon path {
+  fill: white;
+}
+
+.delete-button:hover {
+  width: 90px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.delete-button:hover .delete-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.delete-button::before {
+  display: none;
+  content: "Delete";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.delete-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.356); /* Fondo semitransparente */
+  z-index: 1;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 6%;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el botón del carrito */
+
+.btn-cart {
+  position: fixed;
+  z-index: 999;
+  bottom: 100px;
+  left: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: var(--secundary-color);
+  color: white;
+  width: 50px;
+  height: 45px;
+  opacity: 0.75;
+  cursor: pointer;
+  border: none;
+  animation: bounce_513 1s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cart::after {
+  content: attr(data-quantity);
+  width: 50px;
+  height: 45px;
+  position: absolute;
+  font-size: 15px;
+  color: var(--secundary-color);
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s linear;
+  top: 115%;
+}
+
+.icon-cart {
+  width: 24.38px;
+  height: 30.52px;
+  transition: 0.2s linear;
+}
+
+.icon-cart2{
+  width: 30.38px;
+  height: 50.52px;
+  transition: 0.2s linear;
+}
+
+.icon-cart path{
+  fill: rgb(255, 255, 255);
+  transition: 0.2s linear;
+}
+.icon-cart2 path {
+  fill: rgb(255, 0, 0);
+  transition: 0.2s linear;
+}
+
+.btn-cart:hover > .icon-cart {
+  transform: scale(1.2);
+}
+
+.btn-cart:hover > .icon-cart path {
+  fill: var(--secundary-color);
+}
+
+.btn-cart:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: 105%;
+}
+
+.quantity {
+  display: flex;
+  color: white;
+}
+
+.btn-cart:hover {
+  color: red;
+}
+
+/* Estilos para el botón de cerrar */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+}
+
+#pay-button {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 3.3em 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+#pay-button > svg {
+  height: 30px;
+  position: absolute;
+  padding: 0px 5px;
+  margin-top: -4px;
+}
+
+#pay-button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+#pay-button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+#pay-button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #009087;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+#pay-button:hover {
+  color: #ffffff;
+  border: 1px solid #009087;
+}
+
+#pay-button:hover:before {
+  top: -35%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+#pay-button:hover:after {
+  top: -45%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* Estilos para ocultar el botón cuando se muestra el modal */

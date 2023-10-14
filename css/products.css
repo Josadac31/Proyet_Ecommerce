@@ -1,0 +1,555 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+section[id]{
+  scroll-margin-top: 90px;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 2% ;
+  gap: 11px;
+  flex-wrap: wrap;
+}
+
+.cardColors {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.card-content {
+  position: relative;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+  margin: 25% auto;
+  padding: 5px;
+  text-align: start;
+}
+
+/* alinea el contenido de cada una de las cartas */
+.black-card .card-content {
+  margin: 35% auto !important;
+}
+.yellow-card .card-content {
+  margin: 35% auto !important;
+}
+.white-card .card-content {
+  margin: 10% auto !important;
+}
+.green-card .card-content {
+  margin: 20% auto !important;
+}
+.blue-card .card-content {
+  margin: 18% auto !important;
+}
+.red-card .card-content {
+  margin: 16% auto !important;
+}
+
+.cardColors h2 {
+  font-size: 3rem;
+  font-family: "Passion One", bold;
+  color: #ffffff;
+  opacity: 0.4;
+  font-weight: bold;
+  margin: 0; /* Elimina el margen del h2 */
+}
+.cardColors h3 {
+  font-family: "Roboto", "Montserrat Alternates", sans-serif, "Passion One",
+    cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin: 0; /* Elimina el margen del h3 */
+}
+.cardColors p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Passion One", cursive;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0; /* Elimina el margen del p */
+}
+
+.cardColors.white-card h2 {
+  font-size: 5rem;
+  font-family: "Passion One", bold;
+  color: #ffffff;
+  opacity: 1 !important;
+  font-weight: bold;
+  margin: 0; /* Elimina el margen del h2 */
+}
+.cardColors.white-card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin: 0; /* Elimina el margen del h3 */
+}
+.cardColors.white-card p {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  margin: 0; /* Elimina el margen del p */
+}
+
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.image-container .prdc02 {
+  width: 75%;
+  height: 65%;
+  margin: auto 35%;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.image-container .prdc03 {
+  width: 85%;
+  height: 100%;
+  margin: 10px 120px;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.image-container .prdc04 {
+  width: 38%;
+  height: 70%;
+  margin: 15% 56%;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: 9999;
+}
+.image-container .prdc05 {
+  width: 120%;
+  height: 79%;
+  margin: 22% 0;
+  right: 0;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.image-container .prdc06 {
+  width: 100%;
+  height: 80%;
+  margin: 40% 10%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.cardColors.black-card {
+  width: 22.5vw;
+  height: 20rem;
+  background: linear-gradient(
+    0deg,
+    rgba(51, 51, 51, 1) 0%,
+    rgba(0, 0, 0, 1) 54%
+  );
+}
+.cardColors.black-card:hover {
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.685);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cardColors.yellow-card {
+  width: 22.5vw;
+  height: 20rem;
+  background: linear-gradient(
+    90deg,
+    rgba(254, 190, 16, 1) 0%,
+    rgba(254, 190, 16, 1) 100%
+  );
+}
+
+.cardColors.yellow-card:hover {
+  box-shadow: 0 0 35px rgba(254, 191, 16, 0.733);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cardColors.red-card {
+  width: 46vw;
+  height: 20rem;
+  background: rgb(230, 0, 35);
+  background: linear-gradient(
+    90deg,
+    rgba(230, 0, 35, 1) 0%,
+    rgba(237, 28, 36, 1) 50%,
+    rgba(232, 24, 40, 1) 100%
+  );
+}
+.cardColors.red-card:hover {
+  box-shadow: 0 0 35px rgb(230, 0, 35);
+  transition: box-shadow 0.5s ease-in-out;
+}
+.cardColors.blue-card {
+  width: 22.5vw;
+  height: 20rem;
+  background-color: rgb(0, 127, 255);
+}
+.cardColors.blue-card:hover {
+  box-shadow: 0 0 35px rgb(0, 128, 255);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cardColors.green-card {
+  width: 22.5vw;
+  height: 20rem;
+  background: rgb(80, 200, 120);
+}
+.cardColors.green-card:hover {
+  box-shadow: 0 0 35px rgb(80, 200, 120);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.cardColors.white-card {
+  width: 46vw;
+  height: 20rem;
+  background: rgb(232, 232, 232);
+}
+.cardColors.white-card:hover {
+  box-shadow: 0 0 35px rgb(161, 155, 155);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.img-red-card-major {
+  position: relative;
+  width: 95%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 13% 0;
+}
+.img-green-card-major {
+  position: relative;
+  width: 95%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 13% 0;
+}
+
+.img-red-card-major img {
+  width: 80%;
+  height: auto;
+  display: block;
+  top: 0;
+  z-index: 2; /* La imagen estará en la parte superior */
+  position: absolute;
+}
+.img-green-card-major img {
+  width: 60%;
+  height: auto;
+  display: block;
+  top: 0;
+  z-index: 2; /* La imagen estará en la parte superior */
+  position: absolute;
+}
+
+.red-card-major,
+.green-card-major {
+  position: relative; /* Cambiado de absolute a relative */
+  z-index: 1;
+  width: 98%;
+  height: 28rem;
+  max-width: 100%;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin: 0 auto;  
+}
+.red-card-major {
+  background: linear-gradient(
+    0deg,
+    rgba(237, 41, 57, 1) 54%,
+    rgba(230, 0, 38, 1) 100%
+  );
+}
+.green-card-major {
+  background: rgb(80, 200, 120);
+}
+
+.green-card-major .green-card-major-content {
+  display: flex;
+  flex-direction: row; /* Los elementos se alinearán horizontalmente */
+  justify-content: center;
+  align-items: center;
+  text-align: start; /* Alineación de texto centrada */
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+
+/* Media query para pantallas de ancho máximo de 850px */
+@media only screen and (max-width: 850px) {
+  /* Elimina los espacios entre las cartas */
+  .card-container {
+    gap: 0;
+  }
+
+  /* Cambia el ancho de las cartas */
+  .cardColors.black-card {
+    width: 45vw;
+  }
+  .cardColors.yellow-card {
+    width: 45vw;
+  }
+  .cardColors.red-card {
+    width: 95vw;
+    margin: 120px 2.5vw;
+  }
+  .cardColors.white-card {
+    width: 95vw;
+    margin: 0 2.5vw 120px 2.5vw;
+  }
+  .cardColors.green-card {
+    width: 45vw;
+  }
+  .cardColors.blue-card {
+    width: 45vw;
+  }
+}
+
+/* Media query para pantallas de ancho máximo de 680px */
+@media only screen and (max-width: 680px) {
+
+  /* Cambia el ancho de las cartas */
+  .cardColors.black-card {
+    width: 45vw;
+    margin-left: auto;
+  }
+  .cardColors.yellow-card {
+    width: 45vw;
+    margin: 0 auto;
+  }
+  .cardColors.red-card {
+    width: 95vw;
+    margin: 120px 2.5vw;
+  }
+  .cardColors.white-card {
+    width: 95vw;
+    margin: 120px 2.5vw;
+  }
+  .cardColors.green-card {
+    width: 45vw;
+  }
+  .cardColors.blue-card {
+    width: 45vw;
+  }
+}
+
+/* Media query para pantallas de ancho máximo de 500px */
+@media only screen and (max-width: 500px) {
+
+  /* Cambia el ancho de las cartas */
+  .cardColors.black-card {
+    width: 100vw;
+    margin-left: 0;
+    margin: 15px 2.5vw;
+  }
+  .cardColors.yellow-card {
+    width: 100vw;
+    margin: 15px 2.5vw;
+  }
+  .cardColors.red-card {
+    width: 95vw;
+    margin: 15px 2.5vw;
+  }
+  .cardColors.white-card {
+    width: 95vw;
+    margin: 15px 2.5vw;
+  }
+  .cardColors.green-card {
+    width: 100vw;
+    margin: 15px 2.5vw;
+  }
+  .cardColors.blue-card {
+    width: 100vw;
+    margin: 15px 2.5vw;
+  }
+}
+
+/* Media query para pantallas de ancho máximo de 768px */
+@media (max-width: 768px) {
+  /* Cambiar a diseño de columna en pantallas pequeñas */
+  .green-card-major .green-card-major-content {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Cambiar a diseño de columna en pantallas pequeñas */
+  .green-card-major .green-card-major-content {
+    flex-direction: column;
+  }
+}
+
+.red-card-major .red-card-major-content {
+  display: flex;
+  flex-direction: row; /* Cambia a diseño de columna en pantallas pequeñas */
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 80%;
+  height: 100%;
+  margin: 10% auto;
+}
+
+.red-card-major-content .content-1,
+.red-card-major-content .content-2 {
+  width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  text-align: start; /* Alineación de texto centrada */
+  margin: 2% 0 !important; /* Espacio vertical entre elementos */
+  justify-content: center;
+  align-items: center;
+  line-height: 1; /* Controla el espacio entre líneas */
+}
+.green-card-major-content .content-1,
+.green-card-major-content .content-2 {
+  width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  text-align: start; /* Alineación de texto centrada */
+  margin: 2% 0!important; /* Espacio vertical entre elementos */
+  justify-content: center;
+  line-height: 1; /* Controla el espacio entre líneas */
+
+}
+
+.green-card-major-content .content-1 p,
+.green-card-major-content .content-1 h1 {
+  margin: 5px 0; /* Espacio vertical entre párrafos y encabezados */
+}
+.red-card-major-content .content-1 p,
+.red-card-major-content .content-1 h1 {
+  margin: 5px 0; /* Espacio vertical entre párrafos y encabezados */
+}
+
+.green-card-major-content .content-1 h1 {
+  font-family: "Anton", sans-serif, "Bebas Neue", sans-serif, "Black Han Sans",
+    "Roboto", "Passion One", cursive;
+  font-size: 6rem; /* Reduce el tamaño de fuente para pantallas pequeñas */
+}
+.red-card-major-content .content-1 h1 {
+  font-family: "Anton", sans-serif, "Bebas Neue", sans-serif, "Black Han Sans",
+    "Roboto", "Passion One", cursive;
+  font-size: 6rem; /* Reduce el tamaño de fuente para pantallas pequeñas */
+}
+
+.green-card-major-content .content-1 h2 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Passion One", cursive;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.7rem; /* Reduce el tamaño de fuente para pantallas pequeñas */
+  margin: 0 auto; /* Espacio vertical entre elementos */
+  line-height: 1; /* Controla el espacio entre líneas */
+}
+.red-card-major-content .content-2 h2 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Passion One", cursive;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.7rem; /* Reduce el tamaño de fuente para pantallas pequeñas */
+  margin: 0 auto; /* Espacio vertical entre elementos */
+  line-height: 1; /* Controla el espacio entre líneas */
+}
+
+.green-card-major-content .content-1 h3,
+.green-card-major-content .content-2 h3 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Passion One", cursive;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem; /* Reduce el tamaño de fuente para pantallas pequeñas */
+}
+
+.red-card-major-content .content-1 h3,
+.red-card-major-content .content-2 h3 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Passion One", cursive;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem; /* Reduce el tamaño de fuente para pantallas pequeñas */
+}
+.red-card-major-content .content-2 p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Passion One", cursive;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem; /* Reduce el tamaño de fuente para pantallas pequeñas */
+}
+.green-card-major-content .content-2 p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-family: "Passion One", cursive;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem; /* Reduce el tamaño de fuente para pantallas pequeñas */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+
+  /* Cambiar a diseño de columna en pantallas pequeñas */
+  .red-card-major .red-card-major-content,
+  .green-card-major .green-card-major-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ajustar el tamaño de los elementos */
+  .red-card-major-content .content-1,
+  .red-card-major-content .content-2,
+  .green-card-major-content .content-1,
+  .green-card-major-content .content-2 {
+    width: 100%;
+    height: 25%;
+  }
+
+  /* Ajustar el tamaño de las fuentes */
+  .red-card-major-content .content-1 h1,
+  .red-card-major-content .content-2 h1,
+  .green-card-major-content .content-1 h1,
+  .green-card-major-content .content-2 h1 {
+    font-size: 2.5rem;
+  }
+
+  .red-card-major-content .content-1 h2,
+  .red-card-major-content .content-2 h2,
+  .green-card-major-content .content-1 h2,
+  .green-card-major-content .content-2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .red-card-major-content .content-1 p,
+  .red-card-major-content .content-2 p,
+  .green-card-major-content .content-1 p,
+  .green-card-major-content .content-2 p {
+    font-size: 1rem;
+  }
+
+  /* Ajustar el margen de las imágenes */
+  .img-red-card-major img,
+  .img-green-card-major img {
+    margin: auto 10%;
+  }
+}

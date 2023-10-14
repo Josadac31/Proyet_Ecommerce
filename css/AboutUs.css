@@ -1,0 +1,222 @@
+
+
+#inicio {
+  text-align: center;
+  font-size: 40px;
+  color: #1d1d1d;
+  margin-top: 80px;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+section[id]{
+  scroll-margin-top: 90px;
+}
+
+/* styles.css */
+.quienes-somos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 20px;
+  border-radius: 20px;
+}
+.lobiShop{
+  margin: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.AddtoCartGif{
+  width: 50%;
+  border-radius: 20px;
+  height: auto;
+}
+
+.descripcion {
+  flex: 1;
+  width: 50%;
+  padding: 20px;
+}
+
+.descripcion h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff0000;
+}
+
+.descripcion h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.descripcion h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff0000;
+}
+
+.descripcion p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.imagen {
+  width: 50%;
+}
+.imagen img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  height: auto;
+}
+
+.imagen iframe {
+  border-radius: 20px;
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 1200px) {
+
+  /* Cambiar el ancho de la sección "Quiénes somos" */
+  .quienes-somos {
+    width: 100%;
+  }
+
+  /* Cambiar el ancho de la imagen */
+  .imagen {
+    width: 50vw;
+  }
+}
+
+/* Media query para pantallas medias */
+@media (max-width: 1200px) and (min-width: 768px) {
+
+  /* Cambiar el ancho de la sección "Quiénes somos" */
+  .quienes-somos {
+    width: 100%;
+  }
+
+  /* Cambiar el ancho de la imagen */
+  .imagen {
+    width: 50vw;
+  }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+
+  /* Cambiar el ancho de la sección "Quiénes somos" */
+  .quienes-somos {
+    width: 100%;
+  }
+
+  /* Eliminar el margen entre la imagen y la descripción */
+  .imagen,
+  .descripcion {
+    padding: 0;
+  }
+
+  /* Cambiar el ancho de la imagen */
+  .imagen {
+    width: 50vw;
+  }
+}
+
+.contact-form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-form label {
+  color: black;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+  width: 100%;
+  border-radius: 15px !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #ff6384;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 1200px) {
+
+  /* Cambiar el ancho del formulario */
+  .contact-form {
+      width: 45vw;
+  }
+
+  .imagen iframe{
+      width: 47vw;
+      margin: 0 auto;
+  }
+}
+
+/* Media query para pantallas medias */
+@media (max-width: 1200px) and (min-width: 768px) {
+  .quienes-somos{
+      flex-direction: column;
+  }
+
+  /* Cambiar el ancho del formulario */
+  .contact-form {
+      width: 50vw;
+  }
+
+  .imagen iframe{
+      width: 47vw;
+      margin: 0 auto;
+  }
+
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+
+  .quienes-somos{
+      flex-direction: column;
+  }
+  /* Cambiar el ancho del formulario */
+  .contact-form {
+      width: 60vw;
+  }
+
+  .imagen iframe{
+      width: 47vw;
+      height: auto;
+      margin: 0 auto;
+  }
+
+}

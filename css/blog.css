@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+#inicio {
+  text-align: center;
+  font-size: 40px;
+  color: #1d1d1d;
+  margin-top: 80px;
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --theme-color: rgb(255, 255, 255);
+  --primary-color: #124f88;
+  --secundary-color: #ff0037;
+  --text-color-inverse: rgb(255, 255, 255);
+  --text-color: black;
+  --navbar-shallow-color: #e5e5e5;
+  --menu-mobile-background-color: #3a4460;
+}
+
+.container-cardBlog {
+  width: 100%;
+  max-width: 98%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.container-cardBlog .cardBlog {
+  width: 385px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: start;
+  transition: all 0.25s;
+}
+
+.container-cardBlog .cardBlog:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container-cardBlog .cardBlog img {
+  width: 100%;
+  height: 50%;
+}
+
+.container-cardBlog .cardBlog h2 {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.container-cardBlog .cardBlog p {
+  padding: 0 1rem;
+  font-size: 17px;
+  font-weight: 300;
+  color: #969696;
+}
+
+/* Seccion de estadisticas */
+.cardVideo {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas en la tarjeta */
+    gap: 20px; /* Espacio entre las columnas */
+    width: 92%;
+    max-width: 92%; /* Establece un ancho máximo */
+    margin: 5% auto;
+    border-radius: 10px;
+    overflow: hidden; /* Evita que el video se salga de la tarjeta en pantallas pequeñas */
+    background-color: #737E87;
+  }
+  
+  .video-container {
+    position: relative; /* Para que el video sea responsive */
+    overflow: hidden; /* Oculta el video si se sale de la tarjeta */
+    border-radius: 10px;
+
+}
+  
+  .cardVideo video {
+    width: 100%; /* El video ocupa todo el ancho de su contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 15px;
+  }
+  
+  .titleVideo {
+    padding: 40px; /* Añade un espacio interior para el contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+    text-align: start; /* Centra el texto en pantallas pequeñas */
+  }
+  
+  .titleVideo h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--theme-color);
+    opacity: 0.5;
+  }
+  
+  .titleVideo h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .titleVideo p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  /* Media Queries para hacerlo responsive */
+  @media (max-width: 768px) {
+    .cardVideo {
+      grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+      max-width: none; /* Elimina el ancho máximo */
+    }
+  
+    .titleVideo {
+      text-align: left; /* Vuelve a alinear el texto a la izquierda */
+    }
+  }
+  
